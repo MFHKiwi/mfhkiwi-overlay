@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="person">
+<email>lauri@outlook.co.nz</email>
+<name>MFHKiwi</name>
+</maintainer>
+<longdescription lang="en">
+Zenpower3 is a Linux kernel driver for reading temperature, voltage(SVI2), current(SVI2) and power(SVI2) for AMD Zen family CPUs, now with Zen 3 support!
+</longdescription>
+<upstream>
+	<remote-id type="exozy">a/zenpower3</remote-id>
+	<bugs-to>https://git.exozy.me/a/zenpower3/issues</bugs-to>
+</upstream>
+</pkgmetadata>

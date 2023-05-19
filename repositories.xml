@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<repositories version="1.0">
+	<repo quality="experimental" status="unofficial">
+	<name>mfhkiwi</name>
+            <description lang="en">MFHKiwi's Gentoo Overlay. I am not responsible if my overlay causes: A. your house to burn down. B. a mass extinction event. C. the heat death of the universe.</description>
+	    <homepage>https://github.com/MFHKiwi/mfhkiwi-overlay</homepage>
+		<owner type="person">
+			<name>MFHKiwi</name>
+			<email>lauri@outlook.co.nz</email>
+		</owner>
+		<source type="git">git://github.com/my-name/my-overlay.git</source>
+		<feed>https://github.com/my-name/my-overlay/commits/master.atom</feed>
+	</repo>
+</repositories>
