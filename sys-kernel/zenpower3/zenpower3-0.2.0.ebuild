@@ -23,7 +23,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 CONFIG_CHECK="HWMON PCI AMD_NB"
-MODULE_NAMES="zenpower3(hwmon:)"
+MODULE_NAMES="zenpower(hwmon:)"
 BUILD_TARGETS="all"
 S="${WORKDIR}/zenpower3"
 BUILD_PARAMS="CC=$(tc-getCC) LD=$(tc-getLD) NM=$(tc-getNM) AR=$(tc-getAR)"
