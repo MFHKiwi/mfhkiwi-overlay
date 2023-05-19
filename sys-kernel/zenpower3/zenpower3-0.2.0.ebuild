@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit linux-mod toolchain-funcs
+inherit linux-mod linux-info toolchain-funcs
 
 case ${PV} in
 9999)
@@ -11,7 +11,7 @@ case ${PV} in
 	EGIT_REPO_URI="https://git.exozy.me/a/zenpower3"
 	;;
 *)
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~x86"
 	SRC_URI="https://git.exozy.me/a/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	;;
 esac
@@ -22,20 +22,9 @@ HOMEPAGE="https://git.exozy.me/a/zenpower3"
 LICENSE="GPL-2"
 SLOT="0"
 
-CONFIG_CHECK=""
-MODULE_NAMES="zenpower3"
+CONFIG_CHECK="HWMON PCI AMD_NB"
+MODULE_NAMES="zenpower3(hwmon:)"
 BUILD_TARGETS="all"
 S="${WORKDIR}/zenpower3"
+BUILD_PARAMS="CC=$(tc-getCC) LD=$(tc-getLD) NM=$(tc-getNM) AR=$(tc-getAR)"
 
-pkg_setup() {
-	linux-mod_pkg_setup
-	export KERNELRELEASE=${KV_FULL}
-}
-
-src_compile() {
-	linux-mod_src_compile
-}
-
-src_install() {
-	linux-mod_src_install
-}
