@@ -28,3 +28,6 @@ BUILD_TARGETS="all"
 S="${WORKDIR}/zenpower3"
 BUILD_PARAMS="CC=$(tc-getCC) LD=$(tc-getLD) NM=$(tc-getNM) AR=$(tc-getAR)"
 
+pkg_setup() {
+	linux-mod_pkg_setup
+}
