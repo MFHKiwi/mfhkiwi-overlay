@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit linux-mod linux-info toolchain-funcs
+inherit linux-mod toolchain-funcs
 
 case ${PV} in
 9999)
