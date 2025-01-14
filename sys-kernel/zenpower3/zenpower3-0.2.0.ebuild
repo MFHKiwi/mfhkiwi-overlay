@@ -1,7 +1,7 @@
 
-EAPI=7
+EAPI=8
 
-inherit linux-mod toolchain-funcs
+inherit linux-mod-r1 toolchain-funcs
 
 case ${PV} in
 9999)
@@ -21,11 +21,15 @@ LICENSE="GPL-2"
 SLOT="0"
 
 CONFIG_CHECK="HWMON PCI AMD_NB"
-MODULE_NAMES="zenpower(hwmon:)"
-BUILD_TARGETS="all"
 S="${WORKDIR}/zenpower3"
-BUILD_PARAMS="CC=$(tc-getCC) LD=$(tc-getLD) NM=$(tc-getNM) AR=$(tc-getAR)"
 
 pkg_setup() {
-	linux-mod_pkg_setup
+	linux-mod-r1_pkg_setup
 }
+
+src_compile() {
+	local modlist=( zenpower=hwmon )
+	local modargs=( KERN_DIR="${KV_OUT_DIR}" KERN_VER="${KV_FULL}" )
+	linux-mod-r1_src_compile
+}
+
