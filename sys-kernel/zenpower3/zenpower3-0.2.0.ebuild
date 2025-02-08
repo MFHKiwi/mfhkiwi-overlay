@@ -1,7 +1,7 @@
 
 EAPI=8
 
-inherit linux-mod-r1 toolchain-funcs
+inherit linux-info linux-mod-r1
 
 case ${PV} in
 9999)
@@ -29,7 +29,7 @@ pkg_setup() {
 
 src_compile() {
 	local modlist=( zenpower=hwmon )
-	local modargs=( KERN_DIR="${KV_OUT_DIR}" KERN_VER="${KV_FULL}" )
+	local modargs=( KERN_DIR="${KV_OUT_DIR}" KERN_VER="${KV_FULL}" TARGET="${KV_FULL}" )
 	linux-mod-r1_src_compile
 }
 
