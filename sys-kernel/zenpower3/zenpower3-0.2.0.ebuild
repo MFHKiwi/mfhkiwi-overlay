@@ -21,7 +21,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 CONFIG_CHECK="HWMON PCI AMD_NB"
-S="${WORKDIR}/zenpower3"
+S="${WORKDIR}/zenpower3-0.2.0"
 
 pkg_setup() {
 	linux-mod-r1_pkg_setup
