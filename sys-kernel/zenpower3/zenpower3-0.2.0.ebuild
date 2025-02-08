@@ -6,11 +6,11 @@ inherit linux-info linux-mod-r1
 case ${PV} in
 9999)
 	inherit git-r3
-	EGIT_REPO_URI="https://git.exozy.me/a/zenpower3"
+	EGIT_REPO_URI="https://github.com/PutinVladimir/zenpower3"
 	;;
 *)
 	KEYWORDS="~amd64 ~x86"
-	SRC_URI="https://git.exozy.me/a/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+	SRC_URI="https://github.com/PutinVladimir/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	;;
 esac
 
