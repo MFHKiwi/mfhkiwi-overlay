@@ -10,6 +10,6 @@ Zenpower3 is a Linux kernel driver for reading temperature, voltage(SVI2), curre
 </longdescription>
 <upstream>
 	<remote-id type="exozy">a/zenpower3</remote-id>
-	<bugs-to>https://git.exozy.me/a/zenpower3/issues</bugs-to>
+	<bugs-to>https://github.com/PutinVladimir/zenpower3/issues</bugs-to>
 </upstream>
 </pkgmetadata>
